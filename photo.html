@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <html>
+    <body style="background-color:#ffffff;">
+        <div id="Name">
+            <h2 style="font-size: 34px;">Indian Cancer Data Base for Translational Research <br>ICDTR,(ACTREC)</h2>
+          </div><br></body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+
+      padding: 20px;
+      font-family: Arial;
+      background-image: url('');
+    }
+
+    a {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+     
+      font-size: 20px;
+      word-break: break-all;
+    }
+
+    .row {
+      margin: 10px -16px;
+    }
+
+    /* padding */
+    .row,
+    .row>.column {
+      padding: 8px;
+    }
+
+    /* three equal columns baaju mein  */
+    .column {
+      float: left;
+      width: 33.33%;
+      display: none;
+      /* Hide all elements by default */
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+
+    .content {
+      background-color: #77bdfe;
+      padding: 10px;
+    }
+
+    .show {
+      display: block;
+    }
+
+
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
+      background-color: #ded0f6;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .btn.active {
+      background-color: #ded0f6;
+      color: rgb(0, 0, 0);
+    }
+
+    img {
+
+      height: 60%;
+      background-color: #d0eff6;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+#Name {
+      padding-top: 5px;
+      padding-bottom: 10px;
+      text-align: center;
+      background-color: #e8d4f4;
+      color: #433B4F;
+    }
+    .button-photo {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-photo:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ded0f6,
+    #7d3eeb,
+    #502994,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #32fcff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-photo 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-photo {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-photo:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1 style="font-size: 34px;">ICDTRA PHOTO GALLERY </h1>
+  </div>
+  <div class="main">
+    <div class="row">
+          <h1 button class="button-photo" role="button"><a href="Cancer Patient Navigator meeting.html">Cancer Patient Navigator meeting (27-02.23)</a>
+      </div>
+      <div class="main">
+        <div class="row">
+              <h1 button class="button-photo" role="button"><a href="BTIS Varma lab.html">BTIS Varma lab (8-5-23)</a>
+          </div>
+          <div class="main">
+            <div class="row">
+                  <h1 button class="button-photo" role="button"><a href="Anti Terrorism day.html">Anti Terrorism day (22-05-23)</a>
+              </div>
+              <div class="main">
+                <div class="row">
+                      <h1 button class="button-photo" role="button"><a href="AAZPIRE Clinical Research Workshop.html">AAZPIRE Clinical Research Workshop (30.03.2023)</a>
+                  </div>
+                  <div class="main">
+                    <div class="row">
+                          <h1 button class="button-photo" role="button"><a href="photogallery.html">Varma Lab Scientists</a>
+                      </div>
+              
+      </div>
+
+      <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            g2RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) g2AddClass(x[i], "show");
+          }
+        }
+
+        function g2AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+          }
+        }
+
+        function g2RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+      </script>
+
+</body>
+
+</html>

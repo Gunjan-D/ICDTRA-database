@@ -1,0 +1,60 @@
+</style>
+    <body>
+    <h4>CANCER HOSPITALS IN MAHARASHTRA</h4>    
+    <table style="width:100%">
+      <tr>
+        <th>Sr No.</th>
+        <th>Centers Name</th> 
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        
+      </tr>
+      <tr>
+        <td>1.</td>
+        <td>ACTREC</td>
+        <td>Sector 22, Utsav Chowk - CISF Rd, Kharghar, Navi Mumbai, Maharashtra 410210</td>
+        <td>New Mumbai</td>
+        <td>Maharashtra</td>
+      </tr>
+      <tr>
+        <td>2.</td>
+        <td>Government Medical College - Nagpur </td>
+        <td>Government Medical College,Near Hanuman Nagar,Nagpur- 440009</td>
+        <td>Nagpur </td>
+        <td>Maharashtra</td>
+        
+      </tr>
+      <tr>
+        <td>3.</td>
+        <td>Jehangir Hospital - Jehangir Clinical Development Centre</td>
+        <td>Sohrab Hall 5th Floor,West Wing Opposite Jehangir Hospital 32 Sassoon Road,Pune-411001</td>
+        <td>Pune</td>
+        <td>Maharashtra</td>
+      </tr>
+      <tr>
+        <td>4.</td>
+        <td>Kolhapur Cancer Center </td>
+        <td>A/p. R. S. No. 238, Gokul Shirgaon, Karveer, Kolhapur, Maharashtra-416234</td>
+        <td>Kolhapur</td>
+        <td>Maharashtra</td>
+        </tr>
+        <tr>
+          <td>5.</td>
+          <td> R S T Cancer Hospital & Research Centre  </td>
+          <td>Tukdoji Chowk, Manewada Road, Nagpur – 440027</td>
+          <td>Nagpur</td>
+          <td>Maharashtra</td>
+          </tr>
+    </table>
+</div>
+
+
+CANCER CENTERS IN DELHI
+1. Delhi State Cancer Institutes 8, GTB Hospital Complex, Dilshad Garden, New Delhi, Delhi-110095 New Delhi Delhi
+
+2. Indian Rotary Cancer Institute (AIIMS) IRCH, Ansari Nagar East, New Delhi, Haryana New Delhi New Delhi
+
+3. Max Healthcare Inst. Ltd. Max Super Speciality Hospital, Saket 1,2 Press Enclave Road, Saket,New Delhi-110 017 New Delhi New Delhi
+
+4. R&R Hospital (Armed Forces) Army R And R Hospital, 11, Dhaula Kuan, Delhi Cant, NCR-110010 New Delhi New Delhi

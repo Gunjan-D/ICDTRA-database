@@ -1,0 +1,35 @@
+# Files and folders to ignore
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Log files
+*.log
+
+# Cache files
+*.cache
+
+# Backup files
+*.bak
+*.backup
+
+# Large media files that might cause issues (optional)
+# *.mp4
+# *.avi
+
+# VS Code settings (optional - you might want to include these)
+# .vscode/
+
+# Windows system files
+*.lnk
+
+# Large video files (>100MB) - excluded from GitHub
+Cancer center in India.mp4
+Eph ephrin.mp4

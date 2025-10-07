@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        * {
+            box-sizing: border-box
+        }
+
+        #Name {
+            padding: 20px 15px;
+            text-align: center;
+            background-color: #e8d4f4;
+            color: #433B4F;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: white;
+            line-height: 1.6;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 95%;
+            max-width: 1200px;
+            position: relative;
+            margin: 30px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: #5b5267;
+            transform: scale(1.2);
+            border-color: #5b5267;
+            box-shadow: 0 0 15px rgba(91, 82, 103, 0.5);
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+        .rotate {
+            width: 450px;
+            height: 450px;
+            max-width: 90%;
+            animation: rotation 1s 1;
+            margin: 20px auto;
+            display: block;
+            animation-play-state: paused;
+            animation-delay: calc(var(--scroll) * -1s);
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            object-fit: contain;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes rotation {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        button {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: #433B4F;
+            border: 2px solid rgba(91, 82, 103, 0.3);
+            border-radius: 15px;
+            padding: 16px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 120px;
+            backdrop-filter: blur(10px);
+        }
+        
+        button:hover {
+            background: linear-gradient(145deg, #706085, #5B5267);
+            color: white;
+            box-shadow: 0 8px 25px rgba(91, 82, 103, 0.3);
+            border-color: #5B5267;
+        }
+
+        .Goals {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #433B4F;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 12px 20px;
+            border-radius: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+            border: 2px solid rgba(67, 59, 79, 0.1);
+            margin: 0;
+            width: auto;
+            height: auto;
+        }
+
+        .Res {
+            position: absolute;
+            top: 18%;
+            right: 22%;
+            transform: translateX(50%);
+        }
+
+        .Diag {
+            position: absolute;
+            top: 48%;
+            right: 12%;
+            transform: translateX(50%);
+        }
+
+        .Treat {
+            position: absolute;
+            top: 82%;
+            right: 20%;
+            transform: translateX(50%);
+        }
+
+        .Clin {
+            position: absolute;
+            top: 82%;
+            left: 20%;
+            transform: translateX(-50%);
+        }
+
+        .Data {
+            position: absolute;
+            top: 48%;
+            left: 12%;
+            transform: translateX(-50%);
+        }
+
+        .Edu {
+            position: absolute;
+            top: 18%;
+            left: 22%;
+            transform: translateX(-50%);
+        }
+
+        footer {
+            text-align: center;
+            background-color: #5b5267;
+            color: white;
+            font-size: 14px;
+            padding: 20px;
+            margin-top: 60px;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            bottom: 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #433B4F;
+            text-align: center;
+            margin: 60px 0 40px 0;
+            position: relative;
+            padding: 20px 0;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #5b5267;
+            border-radius: 2px;
+        }
+        
+        .container {
+            position: relative;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 60px 40px;
+            margin: 40px auto 40px auto;
+            max-width: 900px;
+            width: 95%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        window.addEventListener(
+            "scroll",
+            () => {
+                document.body.style.setProperty(
+                    "--scroll",
+                    window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+                );
+            },
+            false
+        );
+    </script>
+</head>
+
+<body>
+    <div id="Name">
+        <h1 style="font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">
+            Indian Cancer Database for Translational Research
+            <span style="display: block; font-size: 24px; font-weight: 500; margin-top: 8px; opacity: 0.9;">(ICDTR), ACTREC</span>
+        </h1>
+    </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="lab.jpg" style="width: 100%; height: 350px; object-fit: cover; display: block;">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="first.JPG" style="width: 100%; height: 350px; object-fit: cover; display: block;">
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="ss.jpg" style="width: 100%; height: 350px; object-fit: cover; display: block;">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <div style="text-align: center; margin: 20px 0; padding: 10px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <br><br><br>
+    <div class="section-title">Our Database Encompasses</div>
+    <div class="container">
+        <div style="position: relative; display: inline-block;">
+            <img src="wheel2.png" class="rotate" />
+            <h1 class="Goals">GOALS</h1>
+        </div>
+        <button class="Res"><a href="final researchhai.html" target="_self">RESEARCH</a></button>
+        <button class="Diag"><a href="diagnosis homepage.html"target="_self">DIAGONOSIS</a></button>
+        <button class="Treat"><a href="treatment options.html"target="_self">TREATMENT<br>OPTIONS</button>
+        <button class="Clin"><a href="">CLINICAL<br>TRIALS</a></button>
+        <button class="Data"><a href="data_releases.html">DATA<br>RELEASES</a></button>
+        <button class="Edu"><a href="education homepage.html">EDUCATION</a></button>
+    </div>
+    
+    <footer>
+        <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 30px; font-family: 'Poppins', sans-serif; font-weight: 500;">
+            <a style="color: white; text-decoration: none; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease;" 
+               href="DEVELOPERS.html" target="_self"
+               onmouseover="this.style.background='rgba(255,255,255,0.2)'" 
+               onmouseout="this.style.background='transparent'">DEVELOPER</a>
+            <span style="color: rgba(255,255,255,0.8); cursor: pointer; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease;"
+                  onmouseover="this.style.background='rgba(255,255,255,0.2)'" 
+                  onmouseout="this.style.background='transparent'">CITATION</span>
+            <span style="color: rgba(255,255,255,0.8); cursor: pointer; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease;"
+                  onmouseover="this.style.background='rgba(255,255,255,0.2)'" 
+                  onmouseout="this.style.background='transparent'">DONATION</span>
+            <span style="color: rgba(255,255,255,0.8); cursor: pointer; padding: 8px 16px; border-radius: 8px; transition: all 0.3s ease;"
+                  onmouseover="this.style.background='rgba(255,255,255,0.2)'" 
+                  onmouseout="this.style.background='transparent'">BOOKS</span>
+        </div>
+    </footer>
+</body>
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) { slideIndex = 1 }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 4000);
+    }
+
+    let SI = 1;
+    showSlides(SI);
+
+    function plusSlides(n) {
+        showSlides(SI += n);
+    }
+
+    function currentSlide(n) {
+        showSlides((SI) = n);
+    }
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { SI = 1 }
+        if (n < 1) { SI = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[SI - 1].style.display = "block";
+        dots[SI - 1].className += " active";
+    }
+</script>
+
+</html>

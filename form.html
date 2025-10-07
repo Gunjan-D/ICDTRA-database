@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body,
+        html {
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .bg-img {
+            background-image: url("india_map.jpg");
+            min-height: 400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .container {
+            position: absolute;
+            left: 5%;
+            margin: 18px;
+            max-width: 300px;
+            padding: 17px;
+            background-color: white;
+        }
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .btn:hover {
+            opacity: 1;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            padding: 5px;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="background-color: #04bd79; padding: 9px; color: white;">Contact Us</h2>
+    <div class="bg-img">
+        <form action="/action_page.php" class="container">
+            <label for="fname">Name</label>
+            <input type="text" id="fname" name="name" placeholder="Your name..">
+
+            <label for="Eid">Email Id</label>
+            <input type="text" id="eid" name="Eid" placeholder="Enter your Email address">
+
+            <label for="Question">Your Question</label>
+            <input type="text" id="Question" name="Question" placeholder="Enter Query..">
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        <div>
+            <div class="tooltip" style="right:36%; top:18%; position: absolute;"><img src="email.png">
+                <span class="tooltiptext">mail@actrec.gov.in</span>
+            </div>
+            <div class="tooltip" style="right:19%; top:18%; position: absolute;"><img src="address.png">
+                <span class="tooltiptext">Tata Memorial Centre Plot No. 1& 2, Sector 22 Kharghar, Navi Mumbai - 410210.<br>Maharashtra, India.</span>
+            </div>
+            <div class="tooltip" style="right:36%; top:55%; position: absolute;"><img src="phone.png">
+                <span class="tooltiptext">(022) 2740 5000/ 6873 5000</span>
+            </div>
+            <div class="tooltip" style="right:19%; top:55%; position: absolute;"><img src="tele.png">
+                <span class="tooltiptext">+91-22-2740 5085</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

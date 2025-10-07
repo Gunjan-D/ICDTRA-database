@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <style>
+        section {
+            background: #e4ebf4;
+            padding: 2rem;
+        }
+
+        h1,
+        h2 {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            background-color: #0b2569;
+            color: aliceblue;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .olcards,
+        .olcards * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .olcards {
+            list-style: none;
+            counter-reset: cardCount;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            --cardsGap: 1rem;
+            gap: var(--cardsGap);
+            padding-bottom: var(--cardsGap);
+            min-width: 60%;
+            max-width: 60%;
+            min-height: 30%;
+        }
+
+        .olcards li {
+            counter-increment: cardCount;
+            display: flex;
+            color: white;
+            --labelOffset: 1rem;
+            --arrowClipSize: 1.5rem;
+            margin-top: var(--labelOffset);
+        }
+
+        .olcards li::before {
+            content: counter(cardCount, decimal-leading-zero);
+            background: white;
+            color: var(--cardColor);
+            font-size: 2em;
+            font-weight: 700;
+            transform: translateY(calc(-1 * var(--labelOffset)));
+            margin-right: calc(-1 * var(--labelOffset));
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-inline: 0.5em;
+        }
+
+        .olcards li .content {
+            background-color: var(--cardColor);
+            --inlinePadding: 1em;
+            --boxPadding: 0.5em;
+            display: grid;
+            padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize)) var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+            grid-template-areas:
+                "icon title"
+                "icon text";
+            gap: 0.25em 1em;
+            clip-path: polygon(0 0,
+                    calc(100% - var(--arrowClipSize)) 0,
+                    100% 50%,
+                    calc(100% - var(--arrowClipSize)) 100%,
+                    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+                    0 calc(100% + var(--cardsGap)));
+            position: relative;
+        }
+
+        .olcards li .content::before {
+            content: "";
+            position: absolute;
+            width: var(--labelOffset);
+            height: var(--labelOffset);
+            background: var(--cardColor);
+            left: 0;
+            bottom: 0;
+            clip-path: polygon(0 0, 100% 0, 0 100%);
+            filter: brightness(0.75);
+        }
+
+        .olcards li .content::after {
+            content: "";
+            position: absolute;
+            height: var(--cardsGap);
+            width: var(--cardsGap);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+            left: 0;
+            top: 100%;
+        }
+
+        .olcards li .content .title {
+            grid-area: title;
+            font-size: 1.25em;
+            /* font-weight: 700; */
+        }
+
+        .olcards li .content .text {
+            grid-area: text;
+        }
+
+        #Name {
+            padding-top: 5px;
+            padding-bottom: 10px;
+            text-align: center  ;
+            background-color: #e8d4f4;
+            color: #433B4F;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Name">
+        <h2 style="font-size: 34px;">Indian Cancer Data Base for Translational Research<br>ACTREC (ICDTRA)</h2>
+    </div>
+    <h1 style="background-color: #0b2569; color: aliceblue; padding: 8px; border-radius: 4px;">About us:</h1>
+    <section>
+        <p style="font-size: 25px;font-weight: bold;">Rationale for the database:</p>
+        <div>
+            <div>
+                <img src="catto.PNG"
+                    style="position:absolute;right:-10%;top:89%;display:inline-block;transform: translate(-50%, -50%);">
+            </div>
+            <div>
+                <ol class="olcards">
+                    <li style="--cardColor:#fc374e">
+                        <div class="content">
+                            <div class="title">No prior distinguished database</div>
+                            <div class="text">There are numerous databases available in various Universities or Research
+                                Centers,
+                                none of these databases can be compared to others, such as the NCI.
+                            </div>
+                        </div>
+                    </li>
+                    <li style="--cardColor:#36aeb3">
+                        <div class="content">
+                            <div class="title">Nationwide accessibility</div>
+                            <div class="text">The exisiting databases do not offer services to the community of cancer
+                                patients nationwide. .
+                            </div>
+                        </div>
+                    </li>
+                    <li style="--cardColor:#162d59">
+                        <div class="content">
+                            <div class="title">Visual learning</div>
+                            <div class="text">None of the databases also contain information in the form of videos.
+                            </div>
+                        </div>
+                    </li>
+                    <li style="--cardColor:#f15f0e">
+                        <div class="content">
+                            <div class="title">Multi-lingual</div>
+                            <div class="text">The exisitng databases provide information about cancer only English and
+                                not
+                                in regional languages from Asia and India.
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <br>
+    <h1>Goals of the database:</h1>
+    <section>
+        <p style="font-size: 20px;font-weight: bold;">This database aims to encompass the various domains required for
+            Cancer studies. Such as:</p>
+        <img src="nnn.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%;">
+        <p style="font-size: 20px;">Research: The vision to envolope Genomic, Proteomic and Structural information of
+            cancer related genes and proteins for quick access to the researchers.<br>
+            Education: The basic information to understand cancer and it's influence in the Indian subcontinent.<br>
+            Data Releases:<br>
+            Diagnosis:<br>
+            Treatment Options:<br>
+            Clinical trials:<br>
+    </section>
+    <br>
+    <h1>Our Logo</h1>
+    <section>
+        <p style="font-size: 20px;">
+            Our logo is designed as to visualize our goal to build a connection between the researchers,<img
+                style="float:right;margin: 5px; height: 200px;width: 200px;" src="ICDTRA logo.png" />
+            the clinicians through knowledge of cancer and it's implementation using various methods including machine
+            learning and AI.
+            The left part encorperates the neural networks and various things used by the clinicians. The right part
+            shows a microscope indicating the resechers 
+        </p>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+.button {
+    border-radius: 12px;
+    background: linear-gradient(145deg, #ffffff, #f0f4f8);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #2d3748;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px 18px;
+    width: 180px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    margin: 8px auto;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    overflow: visible;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover {
+    background: linear-gradient(145deg, #433B4F, #5B5267);
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(91, 82, 103, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .button:hover span {
+    padding-right: 25px;
+    color: white;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .button a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+    object-fit: contain;
+  }
