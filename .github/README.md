@@ -1,6 +1,6 @@
 # 🧬 ICDTRA Database
 
-**⚡ [LIVE DEMO - Click Here!](https://gunjan-d.github.io/ICDTRA-database/) ⚡**
+** [LIVE DEMO - Click Here!](https://gunjan-d.github.io/ICDTRA-database/) **
 
 Indian Cancer Database for Translational Research Applications - Interactive website with diagnostic tools, treatment info & research resources for cancer care advancement.
 
